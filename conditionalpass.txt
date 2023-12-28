@@ -1,0 +1,28 @@
+Promises and Async Await
+
+The Need:
+
+Intermediate JavaScript students are introduced to species of code called asynchronous, code that runs on a delay. The delay may be five milliseconds, the delay may be five minutes (though likely the poor user has moved on) regardless, asynchronous code runs after the completion of synchronous (normal) JavaScript code which may lead to the coder finding their project out of sync.
+
+Consider the following code:
+
+(Example with XHR request and console.log statement).
+
+What will console.log() log?
+
+It logs undefined. Since all synchronous code runs prior to all asynchronous code and console.log() is synchronous, the variable passed into it still does not have a value. In practical terms this means that all operations on an asynchronous request must be carried out within the callback of that request. This sets obvious limitations for projects. Wouldn't it be nice if JavaScript provided a mechanism for making asynchronous code more manageable? It turns out JavaScript provides two.
+
+Promises and Async/Await
+
+Promises and async/await are two syntactical gems that aid us in wrangling asynchronous code and getting it to do our bidding. 
+
+Await awaits a promise so the following won't work:
+
+ApiCall example: (await to Promise).
+
+Promises and async/await are often spoken of as competing technologies but there is a close link between the two. The await keyword which waits for the resolved value of an asynchronous operation will only work with Promises. The following code snippet will not achieve the desired result.
+
+Instead we have to send an AJAX request using fetch(). fetch() returns a Promise. The await keyword placed right before the returned Promise will wait around for the value of that Promise before executing the rest of the code inside of its body. 
+
+We can also perform the same operation using callback functions. Promises are thenable meaning that they allow for the chaining of .then() and .catch(). .then() is invoked if the Promise resolves. .catch() is invoked if the Promise rejects.
+

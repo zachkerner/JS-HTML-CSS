@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script id="tag" type="text/x-handlebars">
+      <strong>{{this}}</strong>
+    </script>
+    <script id="post" type="text/x-handlebars">
+      <article>
+        <h1>{{title}}</h1>
+        <p><time>Posted on {{published}}</time></p>
+        {{{body}}}
+        <footer>
+          <p>
+            Tags:
+            {{#each tags}}
+            {{>tag}}
+            {{/each}}
+          </p>
+        </footer>
+      </article>
+    </script>
+    
+  </head>
+  <body>
+  </body>
+</html>

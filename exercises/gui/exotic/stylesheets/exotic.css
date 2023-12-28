@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(25, 19, 66)
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+[data-id='1'] {
+  width: auto;
+  height: 250px;
+}
+
+[data-id='2'] {
+  width: auto;
+  height: 250px;
+}
+
+.modal {
+  background-color: black;
+  opacity: 66%;
+  width: auto;
+  padding: 0 0 40px 10px;
+}
+
+figure {
+  width: 250px;
+  display: inline-block;
+  height: auto;
+}
+
+figcaption {
+  color: white;
+  width: auto;
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  transition: 400ms;
+}
+
+.show {
+  opacity: 1;
+  transition: 400ms
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Grocery List</title>
+    <style>
+      body {
+        background-color:   #5bccb3;
+      }
+      fieldset {
+        background-color: white;
+        width: 400px;
+        color:  #188870;
+        margin: 75px auto
+      }
+      p {
+        padding-top: 25px
+      }
+      input[type="submit"] {
+        background: linear-gradient(to bottom, #cc183e 0%, #780e24 100%);
+        border: 1px solid #91112c;
+        border-radius: 11px;
+        box-shadow: 0 0 1px 1px #780e24;
+        color: #ffffff;
+        display: block;
+        font: normal 20px Helvetica, Arial, sans-serif;
+        padding: 15px 0;
+        text-shadow: 1px 1px 5px rgba(80, 80, 80, 0.8);
+        width: 100%;
+      }
+      #quantity {
+        margin: 0 0 20px;
+      }
+      h1 {
+        color: #91112c;
+        text-align: center
+      }
+      li {
+        padding: 10px;
+      }
+     
+
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <form>
+        <h2>Add an Item</h2>
+        <dl>
+          <dt>
+            <label for="item">Item name:</label>
+          </dt>
+          <dd>
+            <input type="text" id="item" name="item">
+          </dd>
+          <dt>
+            <label for="quantity">Quantity:</label>
+          </dt>
+          <dd>
+            <input type="number" id="quantity" name="quantity">
+          </dd>
+          <input type="submit" value="Add" id="submit">
+        </dl>
+      </form>
+      <h1>Groceries</h1>
+      <ul id="list">
+
+      </ul>
+    </fieldset>
+    <script src="grocery.js"></script>
+  </body>
+
+</html>

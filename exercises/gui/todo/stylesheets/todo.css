@@ -1,0 +1,86 @@
+body {
+  background-color:  #226543;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+h1 {
+  color: white;
+}
+
+#list {
+  list-style-type: none;
+}
+
+li[data-id] {
+  background-color: white;
+  padding: 10px 5px 10px 10px;
+  margin: 20px 0 0 0;
+  border-radius: 4px;
+  width: 550px;
+  font-weight: bolder;
+}
+
+.overlay {
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  opacity: 20%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#options {
+  overflow: auto;
+}
+
+p {
+  padding: 25px 0 0 25px;
+}
+
+.option.yes {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  right: 45px;
+  border-radius: 4px;
+  border: 10px;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.option.no {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  border-radius: 4px;
+  border: 10px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.dialog {
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border-radius: 4px;
+  width: 500px;
+  height: 150px;
+  top: 30%;
+  left: 35%;
+}
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Zach - Cars</title>
+    <link rel="stylesheet" href="stylesheets/cars.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Buy Used Cars</h1>
+      <div id="filters"></div>
+    </header>
+    <div class="car" data-id="1">
+      <figure>
+        <img src="images/honda-accord-2005.jpg">
+      </figure>
+      <h2>Honda Accord</h2>
+      <p class="year">Year: 2005</p>
+      <p class="price">Price: $7000</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="car" data-id="2">
+      <figure>
+        <img src="images/honda-accord-2008.jpg">
+      </figure>
+      <h2>Honda Accord</h2>
+      <p class="year">Year: 2008</p>
+      <p class="price">Price: $11000</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="car" data-id="3">
+      <figure>
+        <img src="images/toyota-camry-2009.jpg">
+      </figure>
+      <h2>Toyota Camry</h2>
+      <p class="year">Year: 2009</p>
+      <p class="price">Price: $12500</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="car" data-id="4">
+      <figure>
+        <img src="images/toyota-corrolla-2016.jpg">
+      </figure>
+      <h2>Toyota Corolla</h2>
+      <p class="year">Year: 2016</p>
+      <p class="price">Price: $15000</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="car" data-id="5">
+      <figure>
+        <img src="images/suzuki-swift-2014.jpg">
+      </figure>
+      <h2>Suzuki Swift</h2>
+      <p class="year">Year: 2014</p>
+      <p class="price">Price: $9000</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="car" data-id="6">
+      <figure>
+        <img src="images/audi-a4-2013.jpg">
+      </figure>
+      <h2>Audi A4</h2>
+      <p class="year">Year: 2013</p>
+      <p class="price">Price: $25000</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="car" data-id="7">
+      <figure>
+        <img src="images/audi-a4-2013 (1).jpg">
+      </figure>
+      <h2>Audi A4</h2>
+      <p class="year">Year:2013</p>
+      <p class="price">Price: $26000</p>
+      <a href="#">Buy</a>
+    </div>
+
+    <script id="filterTemp" type="text/x-handlebars">
+      <label for='make'>Make:</label>
+      <select name='make' id='make'>
+        {{#each make}}
+        <option value={{this}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <label for='model'>Model:</label>
+      <select name='model' id='model'>
+        {{#each model}}
+        <option value={{this}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <label for='year'>Year:</label>
+      <select name='year' id='year'>
+        {{#each year}}
+        <option value={{this}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <label for='price'>Price:</label>
+      <select name='price' id='price'>
+        {{#each price}}
+        <option value={{this}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <button type='button' id='filterButton'>Filter</button>
+      <button type='button' id='resetButton'>Reset</button>
+    </script>
+    <script src="javascripts/cars.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zach - Quiz</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="multi.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Multiple Choice Quiz</h1>
+    <form action="#" method="post" novalidate>
+      <p class="form_errors"></p>
+      <fieldset>
+  
+
+      </fieldset>
+      <a class="submit">Submit Quiz</a>
+      <a class="reset_form disabled">Reset</a>
+    </form>
+  </div>
+  <script id="questions_template" type="text/x-handlebars-template">
+    {{#each questions}}
+    <div id="q{{id}}">
+      <p>Q{{id}}. {{{description}}}</p>
+      {{#each options}}
+        <input type="radio" id="{{.}}" name="{{../id}}" value="{{this}}">
+        <label for="{{this}}">
+          {{this}}
+        </label>
+      {{/each}}
+      <p class="result"></p>
+    </div>
+    {{/each}}
+  </script>
+  <script src="multi.js"></script>
+</body>
+</html>

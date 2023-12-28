@@ -1,0 +1,26 @@
+body {
+  background: rgb(161, 145, 35);
+  color: white;
+}
+
+.container {
+  width: 340px;
+  margin: 200px auto;
+}
+
+.timer {
+  font-size: 78px;
+  font-weight: bold;
+}
+
+.timer p {
+  margin: 0 0 20px 0;
+}
+
+.buttons {
+  width: 100px;
+  margin: 0 auto;
+}
+
+
+

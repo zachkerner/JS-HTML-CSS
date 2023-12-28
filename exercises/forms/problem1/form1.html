@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Zach Form Problem 1</title>
+    <link rel="stylesheet" href="form1.css">
+    <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  </head>
+</html>
+<body>
+  <main>
+    <h1>Sign Up Form</h1>
+    <div class="signup">
+      <form action="#" method="post" novalidate>
+       
+        <fieldset>
+          <dl>
+            <dt>
+             <label for="first">First Name</label>
+            </dt>
+            <dd>
+              <input type="text" name="first" id="first">
+              <span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="last">Last Name</label>
+            </dt>
+            <dd>
+              <input type="text" name="last" id="last">
+              <span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="email">Email</label>
+            </dt>
+            <dd>
+              <input type="text" name="email" id="email" placeholder="someone@example.com">
+              <span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="password">Password</label>
+            </dt>
+            <dd>
+              <input type="password" name="password" id="password">
+              <span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="phone">Phone Number</label>
+            </dt>
+            <dd>
+              <input type="text" name="phone" id="phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="111-222-3333">
+              <span class="error-message"></span>
+            </dd>
+            <button type="submit">Sign Up</button>
+          </dl>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+ 
+<script src="form1.js"></script>
+</body>

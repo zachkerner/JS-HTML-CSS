@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #add {
+      background-color: blue;
+      color: white
+    }
+  </style>
+  <body>
+    <button id="add">Add more schedules</button>
+    <form method="post" action="/api/schedules">
+      <div id="sched1">
+        <h3>Schedule 1</h3>
+        <dl>
+          <dt>
+            <label for="name">Staff Name:</label>
+          </dt>
+          <dd id="drop1">
+            
+          </dd>
+          <dt>
+            <label for="date">Date:</label>
+          </dt>
+          <dd>
+            <input type="date" name="date" id="date1">
+          </dd>
+          <dt>
+            <label for="time">Time:</label>
+          </dt>
+          <dd>
+            <input type="time" name="time" id="time1">
+          </dd>
+        </dl>
+      </div>
+      <input id="form-submit" type="submit">
+    </form>
+  </body>
+</html>

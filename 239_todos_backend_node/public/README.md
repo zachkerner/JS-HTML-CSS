@@ -1,0 +1,15 @@
+For this project I opted to use the provided HTML/CSS template and model my result based on the demo app. Throughout most of the code I opted for jQuery with a few exceptions. The initial `DOMContentLoaded` event listener is written in normal JavaScript. Here I used a nice trick that I learned from reading the code of a current Capstone participant. I used the `async` keyword in front of the callback function so that I could load the data via a `fetch` call and pass it into my App class. (I also wound up using vanilla JS to toggle the checked class on then off. From reading Stack Overflow it seemed like I was not the first person to encounter this problem.)
+
+I opted to organize my code into a single App class. (I'm used to classes from Ruby). If validation had been a more involved enterprise I would have split off the associated methods into a separate class as I did in my backend final project. 
+
+I debated what to do with the `Mark Complete` button. Two options made sense. Either the button could exclusively mark complete or it could toggle between marking complete and marking incomplete based on the status of the todo. Following the demo app, I chose to keep mark complete a one way street and offshored the mark incomplete functionality to the main page. 
+
+The challenge of this project was identifying and managing the many nuances of the dynamic page and sidebar. Since the `add todo` feature is available across all of the 'pages' (headers) it becomes a question of what to do with the new todos. I elected to revert to the "main" page every time a todo was added to avoid the problem of a new todo appearing under a misaligned header. I also needed to navigate the edge case of completing a final todo under the `Completed` banner. 
+
+ There arose the need to turn event listeners on and off when values were updated dynamically on the page. This added an extra challenge and not a few new methods. Setting the page at reload in the constructor method was insufficient to create a dynamic experience. Without removing and adding listeners, parts of the page would have simply ceased to function after changes were made.
+
+It was surprisingly tricky to implement the functionality that allowed the user to click and highlight one of the sidebars. The "All Todos" and "Completed" headers were wrapped in different HTML elements than the dates beneath them, not to mention that each of the banners had a number of elements. Simple delegation would not suffice but I managed to get it working.
+
+I debated the fate of duplicate todos and decided in the end to allow them. Since todos are supplied an id by the API server, todos can never really be 'duplicate'. (Every todo is special). 
+
+I relied heavily on the `async/await` feature to perform actions via the API server before reflecting those changes on the page. This enabled me to write clean code and avoid the seventh hell of nested event listeners.

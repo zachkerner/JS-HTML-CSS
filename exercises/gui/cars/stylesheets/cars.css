@@ -1,0 +1,61 @@
+header {
+  color: #fff;
+  height: auto;
+  background: #e29921;
+  padding: 20px;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 4px;
+}
+
+select {
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: #e29921;
+  color: white;
+  margin: 0 4px 0 0;
+  background: transparent
+}
+
+button {
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: #e29921;
+  color: white;
+  cursor: pointer;
+}
+
+.car {
+  display: inline-block;
+  width: 250px;
+  text-align: left;
+
+}
+
+.car img {
+  width: 100%;
+}
+.car h2, .car p, .car a {
+  margin-top: 5px;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+a {
+  background: #e29921;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+      body {
+        background-color: #8B0000
+      }
+      fieldset {
+        background-color: white;
+        width: 450px;
+        height: 135px;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif
+      }
+      p {
+        padding-top: 55px
+      }
+      .math {
+        padding: 7px
+      }
+      ::placeholder {
+        color: black
+      }
+      #answer {
+        color: green
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <fieldset>
+      <h2 id="answer">0</h2>
+      <form>
+        <input type="number" id="first" name="first" class="math" placeholder="0">
+        <select name="operator" id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value=".">.</option>
+          <option value="/">/</option>
+        </select>
+        <input type="number" id="second" name="second" class="math" placeholder="0">
+        <input type="submit" id="equals" value="=">
+      </form>
+    </fieldset>
+    <script src="calc.js"></script>
+  </body>
+</html>

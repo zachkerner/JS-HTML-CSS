@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zach - Contact Manager</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="stylesheets/contact.css">
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>Zach - Contact Manager</h1>
+      <p class="subtitle">Launch School Practice Project Towards Final</p>
+    </div>
+  </header>
+  <main>
+    <div class="functionality">
+      <a class="add_contact" href="#">Add Contact</a>
+      <a class="clear" href="#">Clear</a>
+      <input class="search" id="search" type="text" placeholder="Search">
+    </div>
+    <div class="contact_list_div">
+      <ul id="contacts_list">
+
+      </ul>
+    </div>
+    <div class="placeholder">
+      <h2 class="placeholdertext">There are no contacts in our system.</h2>
+    </div>
+    <div class="overlay" id="add_overlay">
+      <div class="form_overlay">
+        <h2 class="form_h2">Add Contact</h2>
+        <fieldset class="add_fieldset">
+          <form class="add_form">
+            <label>Full Name: </label>
+            <input type="text" id="full_name" name="full_name">
+            <label>Email:</label>
+            <input type="text" id="email" name="email">
+            <label>Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number">
+            <label id="tags_label">Tags: (holding shift to select more than one option)</label>
+            <input type="submit" id="submit_add">
+          </form>
+        </fieldset>
+      </div>
+    </div>
+    <div class="overlay">
+      <div class="form_overlay">
+        <h2 class="form_h2">Edit Contact</h2>
+        <fieldset class="edit_fieldset">
+          <form class="edit_form">
+            <label>Full Name: </label>
+            <input type="text" id="full_name" name="full_name">
+            <label>Email:</label>
+            <input type="text" id="email" name="email">
+            <label>Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number">
+            <label>Tags: </label>
+            <input type="text" id="tags" name="tags">
+            <input type="submit" id="submit_add">
+          </form>
+        </fieldset>
+      </div>
+    </div>
+  </main>
+  <script id="contacts_template" type="text/x-handlebars-template">
+      {{#each contacts}}
+        {{> contact}}
+      {{/each}}
+  </script>
+  <script id="contact_template" type="text/x-handlebars-template">
+    <li class="contact" data-id="{{id}}">
+      <h2 class="full_name">{{full_name}}</h2>
+      <dl>
+        <dt>Phone Number:</dt>
+        <dd class="phone_number">{{phone_number}}</dd>
+        <dt>Email:</dt>
+        <dd class="email">{{email}}</dd>
+        <dt>Tags:</dt>
+        <dd class="tags">
+          {{#if tags}}
+          {{#each tags}}
+          <a class="tag_link" data-tag={{this}} href="#">#{{this}}</a>
+          {{/each}}
+          {{else}}
+          <a class="tag_link" data-tag=none href="#">none</a>
+          {{/if}}
+        </dd>
+      </dl>
+      <div class="ud_buttons">
+        <a class="edit" href="#">Edit</a>
+        <a class="delete" href="#">Delete</a>
+      </div>
+    </li>
+  </script>
+  <script id="tags_template" type="text/x-handlebars-template">
+    <select id="tags_menu" name="tags" multiple>
+      {{#each tags}}
+        <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </script>
+  <script src="javascripts/contacts3.js"></script>
+</body>
+</html>

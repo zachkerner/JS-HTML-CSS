@@ -1,0 +1,64 @@
+body {
+  background: #55f;
+}
+#editor {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #ccc;
+  font-family: Helvetica, Arial, 'sans-serif';
+  margin: 30px auto;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.text_box {
+  height: 100%;
+  max-height: 470px;
+  overflow: auto;
+  background: #fff;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.text_box:focus {
+  background: #fff;
+  outline: none;
+}
+
+.buttons {
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Times New Roman', serif;
+  background: #ccc;
+  padding: 5px 0 0 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  width: 25px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button.pushed {
+  border: #bbb;
+  background: #f9f9f9; 
+}
+
+button:hover {
+  border: #bbb;
+  background: #f9f9f9;
+}
+
+.clicked {
+  border: #bbb;
+  background: #f6d0d0;
+}

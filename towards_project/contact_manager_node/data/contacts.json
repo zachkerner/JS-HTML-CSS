@@ -1,0 +1,30 @@
+[
+  {
+    "full_name": "Jonas Kerner",
+    "phone_number": "1234234",
+    "email": "jk@kerner.com",
+    "tags": "",
+    "id": 15
+  },
+  {
+    "full_name": "Emma Kerner",
+    "phone_number": "234234234",
+    "email": "ek@kerner.com",
+    "tags": "",
+    "id": 16
+  },
+  {
+    "full_name": "Sherman Kerner",
+    "phone_number": "123412341234",
+    "email": "sk@kerner.com",
+    "tags": "",
+    "id": 17
+  },
+  {
+    "full_name": "Suzan Grossman",
+    "phone_number": "2134234234",
+    "email": "mom@loveyou.com",
+    "tags": "family",
+    "id": 19
+  }
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <meta charset="UTF-8">
+  <head>
+    <title>Zach - Todo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/todo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1><b>Todos</b></h1>
+    <ul id="list"></ul>
+    <div class="overlay hide"></div>
+    <div class="dialog hide">
+      <p>Are you sure your want to delete this todo?</p>
+      <div id="options">
+        <a class="yes option">Yes</a>
+        <a class="no option">No</a>
+      </div>
+    </div>
+    <script id="todos" type="text/x-handlebars">
+      {{#each todos}}
+      <li data-id={{id}}>{{title}}</li>
+      {{/each}}
+    </script>
+    <script id="context" type="text/x-handlebars">
+      <ul>
+        <li>Edit Todo</li>
+        <li>Show Details</li>
+        <li>Delete Todo</li>
+      </ul>
+    </script>
+    <script src="javascripts/todo.js"></script>
+  </body>
+</html>

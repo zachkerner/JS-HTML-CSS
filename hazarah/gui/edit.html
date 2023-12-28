@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zach - Rich Text Editor</title>
+  <link rel="stylesheet" href="edit.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>Rich Text Editor</h1>
+  <div id="editor">
+    <div class="buttons">
+      <button class="bold dec">B</button>
+      <button class="italicize dec">I</button>
+      <button class="underline dec">U</button>
+      <button class="strikethrough dec">S</button>
+      <button class="link">Lk</button>
+      <button class="ul list">.</button>
+      <button class="ol list">1</button>
+      <button class="left align clicked">Lt</button>
+      <button class="right align">Rt</button>
+      <button class="center align">Ct</button>
+    </div>
+    <div class="text_box" contenteditable="true"></div>
+
+    <script src="edit.js"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+  background-color: #999900;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+section {
+  background-color: white;
+  position: absolute;
+  width: fit-content;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0 auto;
+  left: 35%;
+}
+
+p {
+  width: 400px;
+}
+
+button {
+  color: white;
+  background-color: #999900;
+}
+
+.more {
+  color: white;
+}
+
+.less {
+  color: white;
+}
